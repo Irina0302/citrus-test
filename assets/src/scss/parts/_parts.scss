@@ -1,0 +1,22 @@
+.purchases {
+  font-size: 10px;
+}
+.img {
+  font-size: 28px;
+}
+.img-car {
+  position: absolute;
+  top:80px;
+  right: 10px;
+}
+.header-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+@media only screen and (max-width: 991px) {
+  .header-icon {
+    display: block;
+  }
+
+}

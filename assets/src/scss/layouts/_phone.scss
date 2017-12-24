@@ -1,0 +1,73 @@
+.phone {
+
+  position: relative;
+  z-index: 1;
+  left: 50%;
+  width: 1000px;
+  margin-left: -500px;
+  background-image: url(../../dist/images/block-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
+  min-height: 700px;
+  &__row {
+    @include flex-grid-row();
+
+  }
+  &__drops {
+    position: relative;
+    top: 5px;
+    left: 120px;
+  }
+  &__img {
+    @include  breakpoint(medium down){
+      position: relative;
+      left: 200px;
+    }
+    position: absolute;
+    right: 5px;
+    @include flex-grid-column(6);
+    &--bg-red {
+      position: absolute;
+      top:95px;
+      right: 150px;
+    }
+  }
+  .doogge__img {
+    padding-left: rem-calc(40);
+    max-width: 85%;
+  }
+  &__description {
+    @include breakpoint(medium down){
+      @include flex-grid-column(6);
+      display: none;
+
+    }
+    @include flex-grid-column(6);
+    width: 340px;
+    height: 547px;
+    padding-top: rem-calc(100);
+    opacity: 0.95;
+
+  }
+  &__subtitle {
+    z-index: 2;
+    position: relative;
+    color: white;
+    max-width: 145%;
+    padding-top: 100px;
+    padding-left: 10px;
+  }
+  &__text {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 14px;
+    width: 280px;
+    font-weight: 400;
+    font-family: 'Ubuntu', sans-serif;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

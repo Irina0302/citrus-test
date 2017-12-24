@@ -1,0 +1,66 @@
+.main {
+  &__row {
+    @include flex-grid-row();
+    min-height: 91px;
+    margin-bottom: 33px;
+
+  }
+  &__subtitle {
+    @include breakpoint(medium down){
+      @include flex-grid-column(12);
+      text-align: center;
+    }
+    @include flex-grid-column(4);
+    font-weight: bold;
+    padding-top: 27px;
+    text-align: left;
+    color: #302e30;
+    font-family: 'Montserrat', sans-serif;
+    font-size: rem-calc(25);
+    line-height: 42.29px;
+    text-transform: uppercase;
+  }
+  &__description {
+    @include breakpoint(medium down){
+      @include flex-grid-column();
+    }
+    @include flex-grid-column(8);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item :first-child {
+    @include breakpoint(medium down) {
+      @include flex-grid-column(3);
+    }
+    color: #302e30;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    line-height: 42.29px;
+  }
+  &__btn {
+    @include breakpoint(medium down) {
+      @include flex-grid-column(2);
+
+    }
+    color: white;
+    border-radius: 5px;
+    width: 115px;
+    height: 37px;
+    box-shadow: inset 0 -3px 0 rgba(5, 142, 216, 0.75);
+    background-color: #008cd7;
+    opacity: 0.98;
+  }
+  &__img {
+    @include flex-grid-column(4);
+    max-width: 50%;
+  }
+  &__options {
+    @include flex-grid-column(8);
+  }
+  .options-descriptions {
+    color: black;
+    font-weight: bold;
+  }
+}

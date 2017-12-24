@@ -1,0 +1,21 @@
+.gestures {
+  margin-bottom: 100px;
+  &__row {
+    @include flex-grid-row();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    @include flex-grid-column(6);
+    margin-bottom: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  &__img {
+    @include flex-grid-column(12);
+
+  }
+}

@@ -1,0 +1,46 @@
+.core {
+
+  &__row {
+    position: relative;
+    @include flex-grid-row();
+    min-height: 700px;
+    z-index: 1;
+    left: 50%;
+    width: 1000px;
+    margin-left: -500px;
+    background-image: url(../../dist/images/rectangle-2-copy.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  &__img {
+    @include flex-grid-column(6);
+    position: absolute;
+    right: 43px;
+    &--padding {
+      padding-left: 50px;
+    }
+
+  }
+  &__subtitle {
+    @include flex-grid-column(6);
+    padding-top: 80px;
+
+
+
+  }
+  &__title {
+    position: absolute;
+    top: 140px;
+    left: 90px;
+  }
+  &__text {
+    position: absolute;
+    top:250px;
+    color:white;
+    width: 310px;
+    left: 90px;
+  }
+
+
+}

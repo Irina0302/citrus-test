@@ -1,0 +1,125 @@
+
+.header {
+  &__row--orange {
+    @include flex-grid-row();
+    background-color: #f6731c;
+    height: rem-calc(91);
+
+  }
+  &__logo {
+    @include breakpoint(medium down) {
+      @include flex-grid-column(6);
+    }
+    padding-top: rem-calc(25);
+    @include flex-grid-column(2);
+  }
+  &__search {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    padding-top: rem-calc(25);
+    @include flex-grid-column();
+    &search {
+      box-shadow: none;
+      font-size: 12px;
+      color: rgb(119, 119, 119);
+      box-sizing: border-box;
+      margin: 0;
+      padding: 4px 26px 4px 6px;
+      border-width: 0;
+      border-style: initial;
+      border-color: initial;
+      border-image: initial;
+      border-radius: 3px 0 0 3px;
+      &__btn {
+        padding: 0;
+        margin: 0;
+        width: 10px;
+        color: white;
+      }
+    }
+
+  }
+  &__contact {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    :first-child {
+      padding-top: 10px;
+    }
+    @include flex-grid-column();
+    text-align: left;
+    font-size: 10px;
+
+    &--number {
+      @include breakpoint(medium down) {
+        display: none;
+      }
+      font-size: 21px;
+    }
+
+  }
+  &__cart {
+    /* @include breakpoint(medium down) {
+       display: none;
+     }*/
+    @include respond-to(phone_6) {
+      display: none;
+      outline: 1px solid red;
+    }
+    @include flex-grid-column();
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__row--green {
+    @include flex-grid-row()
+  }
+  &__menu {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    font-size: 14px;
+    padding: 0;
+    @include flex-grid-column();
+    background-color: #7eb105;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item :first-child {
+    color: white;
+  }
+  &__item--sale {
+    background-color: #c52146;
+    color: white;
+    text-transform: uppercase;
+  }
+  &__row--grey {
+    @include flex-grid-row();
+    @include breakpoint(medium down) {
+      display: none;
+    }
+  }
+  &__nav {
+    @include breakpoint(medium down) {
+      display: none;
+    }
+    font-size: 14px;
+    padding: 0;
+    @include flex-grid-column();
+    background-color: #777777;
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item--lapti {
+    background-color: #fed807;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,32 @@
+.social {
+  &__row {
+    @include flex-grid-row();
+    min-height: 700px;
+    background-image: url(../../dist/images/block-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+  &__subtitle {
+    @include flex-grid-column(6);
+    position: relative;
+    top: 105px;
+  }
+  &__img {
+    @include flex-grid-column(6);
+    position: relative;
+    right: 14px;
+  }
+  &__title {
+    position: absolute;
+    top: 95px;
+    left: 50px;
+  }
+  &__description{
+    position: absolute;
+    width: rem-calc(280);
+    top: 150px;
+    left: 50px;
+    color: white;
+  }
+}

@@ -1,0 +1,37 @@
+////$wide_screens_1280: 1280px;
+$wide_screens: 1280px;
+$tablet_portrait: 768px;
+$phone_6plus: 425px;
+$phone_6: 375px;
+$phone_5: 320px;
+$phone_land: 736px;
+$landscape: landscape;
+@mixin respond-to($media) {
+  @if $media == phone_5 {
+    @media only screen and (max-width: $phone_5) {
+      @content;
+    }
+  } @else if $media == phone_6 {
+    @media only screen and (max-width: $phone_6) {
+      @content;
+    }
+  } @else if $media == phone_6plus {
+    @media only screen and (max-width: $phone_6plus) {
+      @content;
+    }
+  } @else if $media == tablet_portrait {
+    @media only screen and (max-width: $tablet_portrait) {
+      @content;
+    }
+  } @else if $media == wide_screens {
+    @media only screen and (max-width: $wide_screens) {
+      @content;
+    }
+  }
+
+  @if $media == landscape_orient {
+    @media only screen and (max-width: $phone_land) and (orientation: $landscape) {
+      @content;
+    }
+  }
+}

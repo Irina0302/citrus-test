@@ -1,0 +1,29 @@
+html {
+  font-size: 16px;
+  @include breakpoint(medium only) {
+    font-size: 90%;
+  }
+  @include breakpoint(small only) {
+    font-size: 80%;
+  }
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}
+.section-title {
+  //@include heading-with-box();
+}
+
+body {
+  font-family:'Ubuntu', sans-serif;
+  color: #302e30;
+
+}
